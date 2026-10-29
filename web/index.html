@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101722">
+<meta name="description" content="Мониторинг поисковых позиций сайта битвадиванов.рф по Калининграду и Калининградской области">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+<title>SEO-Радар — Битва диванов</title>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="Навигация">
+    <div class="brand">
+      <img class="brand-icon" src="./icons/icon-192.png" alt="" width="46" height="46">
+      <div><div class="brand-name">SEO-РАДАР</div><div class="brand-caption">БИТВА ДИВАНОВ</div></div>
+    </div>
+    <p class="side-label">АНАЛИТИКА САЙТА</p>
+    <nav class="side-nav" aria-label="Разделы">
+      <button data-tab="overview" class="side-link is-current" type="button"><span class="nav-symbol">▦</span>Обзор</button>
+      <button data-tab="keywords" class="side-link" type="button"><span class="nav-symbol">⌕</span>Поисковые запросы</button>
+      <button data-tab="history" class="side-link" type="button"><span class="nav-symbol">◷</span>История</button>
+      <button data-tab="settings" class="side-link" type="button"><span class="nav-symbol">⚙</span>Подключение</button>
+    </nav>
+    <div class="side-bottom">
+      <div class="side-plaque"><span class="muted-small">ВАШ САЙТ</span><strong>битвадиванов.рф</strong><span class="small-outline">Калининград / область</span></div>
+      <p class="side-foot">Данные Яндекс Вебмастера<br>Без вымышленных позиций</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topline"><span class="path">ПРОДВИЖЕНИЕ САЙТА <span class="slash">/</span> <b id="crumb">ОБЗОР</b></span><div class="top-status"><span id="status-dot" class="status-dot"></span><span id="sync-status">Ожидание подключения</span></div></div>
+    <nav class="mobile-nav" aria-label="Навигация на телефоне">
+      <button data-tab="overview" class="mob-link is-current" type="button">Обзор</button>
+      <button data-tab="keywords" class="mob-link" type="button">Запросы</button>
+      <button data-tab="history" class="mob-link" type="button">История</button>
+      <button data-tab="settings" class="mob-link" type="button">Настройки</button>
+    </nav>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">SEO МОНИТОРИНГ • КАЛИНИНГРАД</div>
+        <h1 id="page-title">Поисковые позиции <em>сайта</em></h1>
+        <p id="page-description">Позиции в Яндексе, динамика и приоритетные запросы для «Битвы диванов».</p>
+      </div>
+      <div class="hero-actions">
+        <button class="button outline-btn" id="install-button" type="button"><span class="btn-icon">↧</span> Установить</button>
+        <button class="button primary-btn" id="refresh-button" type="button"><span class="btn-icon">⟳</span> Обновить данные</button>
+      </div>
+    </div>
+
+    <div id="warning" class="warning" role="status"></div>
+
+    <div class="filters" id="filters">
+      <label class="filter"><span>ПОИСКОВАЯ СИСТЕМА</span><select id="engine"><option value="Yandex">Яндекс</option><option value="Google">Google — не подключён</option></select></label>
+      <label class="filter"><span>РЕГИОН</span><select id="region"><option value="22">Калининград</option><option value="10857">Калининградская область</option></select></label>
+      <label class="filter"><span>УСТРОЙСТВО</span><select id="device"><option value="mobile">Телефон</option><option value="desktop">Компьютер</option></select></label>
+      <div class="filter-date"><span>ПОСЛЕДНЯЯ ПРОВЕРКА</span><strong id="last-update">—</strong><small>Статистика: <b id="last-statistic">—</b></small></div>
+    </div>
+
+    <section id="overview" class="tab-view">
+      <div class="kpis" id="kpis"></div>
+      <div class="two-col">
+        <article class="panel chart-panel">
+          <header class="panel-heading"><div><span class="overline">ПОЗИЦИИ САЙТА</span><h2>Динамика в поиске</h2><p>Средняя позиция отслеживаемых запросов</p></div><span class="mini-tag">Позиция 1 — лучшая</span></header>
+          <div id="chart" class="chart-area"></div>
+        </article>
+        <article class="panel alerts-panel"><header class="panel-heading"><div><span class="overline">ВНИМАНИЕ</span><h2>Изменения позиций</h2><p>Заметные падения и выход в ТОП-10</p></div></header><div id="alerts"></div></article>
+      </div>
+      <div class="table-section"><div class="table-title"><div><span class="overline">ОСНОВНЫЕ ЗАПРОСЫ</span><h2>Видимость «Битвы диванов»</h2></div><button class="text-action" type="button" id="all-keywords-button">Все запросы <span>›</span></button></div><div class="table-scroll"><table><thead><tr><th>ПОИСКОВАЯ ФРАЗА</th><th>ПОЗИЦИЯ</th><th>ИЗМЕНЕНИЕ</th><th>ПОКАЗЫ</th></tr></thead><tbody id="overview-rows"></tbody></table></div></div>
+      <p class="footnote">* Данные Яндекс Вебмастера отражают средние позиции показа, а не единственное фиксированное место в выдаче. Отсутствие данных не означает позицию за пределами ТОП-100.</p>
+    </section>
+
+    <section id="keywords" class="tab-view is-hidden">
+      <div class="table-section"><div class="table-title"><div><span class="overline">СЕМАНТИЧЕСКОЕ ЯДРО</span><h2>Отслеживаемые запросы</h2></div><span class="query-counter" id="query-counter">21 запрос</span></div>
+      <div class="table-filters"><label class="search-field"><span>⌕</span><input id="query-search" type="search" placeholder="Найти поисковую фразу" aria-label="Поиск по фразам"></label><label class="category-select"><select id="group-select" aria-label="Категория"><option value="all">Все категории</option></select></label></div>
+      <div class="table-scroll"><table><thead><tr><th>ЗАПРОС</th><th>ПОЗИЦИЯ</th><th>ДИНАМИКА</th><th>ПОКАЗЫ</th><th>КЛИКИ</th><th>ДАТА</th></tr></thead><tbody id="keyword-rows"></tbody></table></div>
+      <div class="table-footer">Чтобы добавить запрос для ежедневной автоматической проверки, измените <code>config/keywords.json</code> в проекте на GitHub.</div>
+      </div>
+    </section>
+
+    <section id="history" class="tab-view is-hidden">
+      <article class="panel" style="margin-bottom:16px"><header class="panel-heading"><div><span class="overline">АРХИВ</span><h2>История проверок</h2><p>Реальные даты статистики, не предполагаемые значения</p></div><button type="button" class="button outline-btn small-btn" id="csv-button">Скачать CSV</button></header><div class="table-scroll"><table><thead><tr><th>ДАТА</th><th>ЗАПРОС</th><th>ПОЗИЦИЯ</th><th>ПОКАЗЫ</th><th>КЛИКИ</th></tr></thead><tbody id="history-rows"></tbody></table></div></article>
+      <div class="soft-note">История хранится в опубликованном файле <code>data/positions.json</code>. Каждый день сохраняются новые полученные значения, максимум за 120 дней.</div>
+    </section>
+
+    <section id="settings" class="tab-view is-hidden">
+      <div class="setup-layout">
+        <article class="panel"><header class="panel-heading"><div><span class="overline">ПОДКЛЮЧЕНИЕ</span><h2>Автоматическая проверка Яндекса</h2><p>Без сохранения секретных токенов в браузере</p></div></header>
+          <div class="setup-body">
+            <div class="setup-step"><div class="step-index">01</div><div><h3>Добавьте проект на GitHub</h3><p>Загрузите файлы комплекта в репозиторий. В настройках Pages выберите источник <strong>GitHub Actions</strong>.</p></div></div>
+            <div class="setup-step"><div class="step-index">02</div><div><h3>Дайте доступ к Яндекс Вебмастеру</h3><p>Создайте OAuth-приложение для доступа к API Вебмастера, выдайте доступ к данным сайта. Токен сохраните в <strong>GitHub → Settings → Secrets and variables → Actions</strong> под именем <code>YANDEX_TOKEN</code>.</p><a href="https://yandex.ru/dev/webmaster/doc/ru/tasks/how-to-get-oauth" target="_blank" rel="noopener noreferrer">Официальная инструкция Яндекса ↗</a></div></div>
+            <div class="setup-step"><div class="step-index">03</div><div><h3>Запустите первый сбор</h3><p>GitHub → Actions → SEO-Радар — позиции и публикация → Run workflow. Далее проверки запланированы ежедневно около 07:12 по Калининграду.</p></div></div>
+            <div class="setup-step"><div class="step-index">04</div><div><h3>Установите на Android</h3><p>Откройте адрес GitHub Pages в Chrome на Samsung → меню ⋮ → <strong>Установить приложение</strong> или <strong>Добавить на главный экран</strong>.</p></div></div>
+          </div>
+        </article>
+        <div class="setup-aside">
+          <article class="panel mini-panel"><div class="overline">ИСТОЧНИК ДАННЫХ</div><div class="source-title">Яндекс Вебмастер <span>API 4</span></div><p>Среднее место показа, показы, клики по запросам. Два региона и два типа устройства. Данные за последние две недели при каждом сборе.</p><a href="https://yandex.ru/dev/webmaster/doc/ru/reference/host-query-analytics" target="_blank" rel="noopener noreferrer">Документация API ↗</a></article>
+          <article class="panel mini-panel"><div class="overline">БЕЗОПАСНОСТЬ</div><div class="source-title">Токен только в секретах</div><p>Не присылайте OAuth-токен в чат. Он нужен лишь серверному запуску GitHub Actions и никогда не встраивается в HTML-приложение.</p></article>
+          <article class="panel mini-panel"><div class="overline">ОГРАНИЧЕНИЯ</div><div class="source-title">Google и уведомления</div><p>Google пока не подключён. Веб-версия сама не проверяет выдачу в фоновом режиме: ежедневный сбор выполняет GitHub Actions. Push-уведомления без сервера не реализованы.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <footer>SEO-Радар · Битва диванов <span>Калининград · 2026</span></footer>
+  </main>
+</div>
+
+<dialog id="detail-dialog" class="detail-dialog"><form method="dialog"><button class="dialog-close" type="submit" aria-label="Закрыть">×</button></form><div id="detail-content"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script id="bootstrap" type="application/json">{}</script>
+<script src="./app.js" defer></script>
+</body>
+</html>
