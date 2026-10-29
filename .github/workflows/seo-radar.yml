@@ -1,0 +1,91 @@
+name: SEO-Радар — позиции и публикация
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # 07:12 по Калининграду (Europe/Kaliningrad, UTC+2).
+    # GitHub может задерживать запуск плановых заданий.
+    - cron: '12 5 * * *'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: seo-radar
+  cancel-in-progress: false
+
+jobs:
+  scan-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Получить проект
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Настроить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Проверить сборщик
+        run: python -m unittest discover -s tests -v
+
+      - name: Проверить запросы через официальный API
+        id: collector
+        env:
+          YANDEX_TOKEN: ${{ secrets.YANDEX_TOKEN }}
+        run: python scripts/check_positions.py
+        continue-on-error: true
+
+      - name: Сохранить историю замеров
+        run: |
+          git config user.name 'seo-radar-bot'
+          git config user.email 'seo-radar-bot@users.noreply.github.com'
+          git add web/data/positions.json
+          if ! git diff --cached --quiet; then
+            git commit -m "SEO: обновление позиций"
+            git push
+          fi
+
+      - name: Настроить GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Подготовить сайт
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+
+      - name: Опубликовать мобильное приложение
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Подтвердить результат сбора
+        env:
+          COLLECTOR_OUTCOME: ${{ steps.collector.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          data = json.loads(Path('web/data/positions.json').read_text(encoding='utf-8'))
+          collection = data.get('collection', {})
+          summary = '\n'.join([
+              '## SEO-Радар: результат сбора',
+              f"Статус API: **{data.get('status', 'unknown')}**",
+              f"Успешных запросов: {collection.get('successful_requests', 0)} / {collection.get('total_requests', 0)}",
+              f"Получено записей позиций: {collection.get('current_position_records', 0)}",
+              f"Последняя дата позиций в этом сборе: {collection.get('latest_position_date') or 'нет данных'}",
+              'Публикация сайта сама по себе не подтверждает получение реальных позиций.',
+          ])
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(summary + '\n', encoding='utf-8')
+          if os.environ['COLLECTOR_OUTCOME'] != 'success' or data.get('status') != 'ok':
+              raise SystemExit('Сайт опубликован, но сбор не подтверждён полностью. Проверьте статус и секрет YANDEX_TOKEN.')
+          PY
