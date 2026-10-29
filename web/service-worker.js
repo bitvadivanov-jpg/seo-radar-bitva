@@ -1,6 +1,6 @@
 /* Данные загружаются из сети; офлайн-копия явно помечена для интерфейса. */
 const PREFIX='seo-radar:'+new URL(self.registration.scope).pathname+':';
-const VERSION=PREFIX+'v4';
+const VERSION=PREFIX+'v5';
 const CORE=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 const dataURL=new URL('./data/positions.json',self.registration.scope).href;
 self.addEventListener('install',event=>{
