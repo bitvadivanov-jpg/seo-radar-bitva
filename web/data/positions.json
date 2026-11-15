@@ -3,8 +3,8 @@
   "site": "битвадиванов.рф",
   "provider": "Яндекс Вебмастер",
   "position_type": "average_show_position",
-  "updated_at": "2026-11-13T06:01:54+00:00",
-  "status": "error",
+  "updated_at": "2026-11-15T05:56:15+00:00",
+  "status": "ok",
   "keywords": [
     {
       "query": "битва диванов калининград",
@@ -1329,19 +1329,15 @@
       "url": "/korporativ-kaliningrad"
     }
   ],
-  "errors": [
-    {
-      "message": "В Яндекс Вебмастере не найден подтверждённый сайт битвадиванов.рф. Проверьте аккаунт."
-    }
-  ],
-  "last_attempt_at": "2026-11-14T05:53:24+00:00",
-  "last_success_at": "2026-11-13T06:01:54+00:00",
+  "errors": [],
+  "last_attempt_at": "2026-11-15T05:56:00+00:00",
+  "last_success_at": "2026-11-15T05:56:15+00:00",
   "collection": {
-    "successful_requests": 0,
+    "successful_requests": 84,
     "total_requests": 84,
-    "current_position_records": 0,
-    "latest_date": null,
-    "latest_position_date": null
+    "current_position_records": 24,
+    "latest_date": "2026-10-06",
+    "latest_position_date": "2026-10-06"
   },
   "latest_position_date": "2026-10-06"
 }
