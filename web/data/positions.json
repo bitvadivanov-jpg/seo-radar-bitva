@@ -3,7 +3,7 @@
   "site": "битвадиванов.рф",
   "provider": "Яндекс Вебмастер",
   "position_type": "average_show_position",
-  "updated_at": "2026-11-16T06:15:00+00:00",
+  "updated_at": "2026-11-17T06:02:37+00:00",
   "status": "ok",
   "keywords": [
     {
@@ -1330,8 +1330,8 @@
     }
   ],
   "errors": [],
-  "last_attempt_at": "2026-11-16T06:14:44+00:00",
-  "last_success_at": "2026-11-16T06:15:00+00:00",
+  "last_attempt_at": "2026-11-17T06:02:26+00:00",
+  "last_success_at": "2026-11-17T06:02:37+00:00",
   "collection": {
     "successful_requests": 84,
     "total_requests": 84,
