@@ -3,7 +3,7 @@
   "site": "битвадиванов.рф",
   "provider": "Яндекс Вебмастер",
   "position_type": "average_show_position",
-  "updated_at": "2026-11-26T06:04:17+00:00",
+  "updated_at": "2026-11-27T06:06:53+00:00",
   "status": "ok",
   "keywords": [
     {
@@ -4198,17 +4198,303 @@
       "clicks": 0.0,
       "demand": 3.0,
       "url": "/novogodnie-korporativy-2026"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "битва диванов калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "выездной квиз калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "где отметить день рождения калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "детский день рождения калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/detskiy-den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "игровое шоу калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "игры для компании калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "корпоратив калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/korporativ-kaliningrad"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "новогодний корпоратив калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/novogodnie-korporativy-2026"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "битва диванов калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": 1.6,
+      "impressions": 10.0,
+      "clicks": 4.0,
+      "demand": 7.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "детский день рождения калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/detskiy-den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "игры для компании калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "корпоратив калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/korporativ-kaliningrad"
+    },
+    {
+      "date": "2026-11-21",
+      "query": "новогодний корпоратив калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/novogodnie-korporativy-2026"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "битва диванов калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": 1.0,
+      "impressions": 1.0,
+      "clicks": 0.0,
+      "demand": 1.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "выездной квиз калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "где отметить день рождения калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "детский день рождения калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/detskiy-den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "игровое шоу калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "игры для компании калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "корпоратив калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/korporativ-kaliningrad"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "новогодний корпоратив калининград",
+      "region": "10857",
+      "device": "desktop",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/novogodnie-korporativy-2026"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "битва диванов калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": 1.0,
+      "impressions": 3.0,
+      "clicks": 1.0,
+      "demand": 3.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "детский день рождения калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/detskiy-den-rozhdeniya-kaliningrad"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "игры для компании калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "корпоратив калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": null,
+      "impressions": 0.0,
+      "clicks": 0.0,
+      "demand": 0.0,
+      "url": "/korporativ-kaliningrad"
+    },
+    {
+      "date": "2026-11-22",
+      "query": "новогодний корпоратив калининград",
+      "region": "10857",
+      "device": "mobile",
+      "position": 12.0,
+      "impressions": 1.0,
+      "clicks": 0.0,
+      "demand": 2.0,
+      "url": "/novogodnie-korporativy-2026"
     }
   ],
   "errors": [],
-  "last_attempt_at": "2026-11-26T06:04:03+00:00",
-  "last_success_at": "2026-11-26T06:04:17+00:00",
+  "last_attempt_at": "2026-11-27T06:06:42+00:00",
+  "last_success_at": "2026-11-27T06:06:53+00:00",
   "collection": {
     "successful_requests": 84,
     "total_requests": 84,
-    "current_position_records": 59,
-    "latest_date": "2026-11-20",
-    "latest_position_date": "2026-11-20"
+    "current_position_records": 53,
+    "latest_date": "2026-11-22",
+    "latest_position_date": "2026-11-22"
   },
-  "latest_position_date": "2026-11-20"
+  "latest_position_date": "2026-11-22"
 }
